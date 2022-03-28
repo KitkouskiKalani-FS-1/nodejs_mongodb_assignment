@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const authorRoutes = require("../api/routes/authors")
 const bookRoutes = require("../api/routes/books")
 const carRoutes = require("../api/routes/cars")
+const dealershipRoutes = require("../api/routes/dealerships")
 
 //middleware for logging 
 app.use(morgan("dev"))
@@ -37,6 +38,7 @@ app.get("/", (req,res,next)=>{
 app.use("/authors", authorRoutes)
 app.use("/books", bookRoutes)
 app.use("/cars", carRoutes)
+app.use("/dealerships", dealershipRoutes)
 
 //Error handle
 app.use((req,res,next) =>{
